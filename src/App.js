@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Route, Link } from 'react-router-dom'
 import Header from './Header/Header'
+import PhotoList from './PhotoList/PhotoList'
 import './App.css'
 
 
@@ -12,9 +13,7 @@ class App extends Component {
           <Route path='/' component={Header} />
         </header>
         <main className='App'>
-          <Link to='/'>
-            Link
-          </Link>
+          <Route path='/' component={PhotoList} />
         </main>
       </div>
     );
