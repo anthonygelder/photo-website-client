@@ -1,0 +1,27 @@
+[1mdiff --git a/src/PhotoList/PhotoList.js b/src/PhotoList/PhotoList.js[m
+[1mindex 55037b5..7eb5b36 100644[m
+[1m--- a/src/PhotoList/PhotoList.js[m
+[1m+++ b/src/PhotoList/PhotoList.js[m
+[36m@@ -4,9 +4,21 @@[m [mimport { Route, Link } from 'react-router-dom'[m
+ [m
+ class PhotoList extends Component {[m
+ [m
+[32m+[m[32m    returnPhotos() {[m
+[32m+[m[32m        const imageName = require('../img/img_lights.jpg')[m
+[32m+[m[32m        return ([imageName,imageName,imageName])[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    renderPhotos() {[m
+[32m+[m[32m        const pics = this.returnPhotos()[m
+[32m+[m
+[32m+[m[32m        return ([m
+[32m+[m[32m            {pics.map}[m
+[32m+[m[32m        )[m
+[32m+[m[32m    }[m
+[32m+[m
+ [m
+     render() {[m
+[31m-        const imageName = require('../img/img_lights.jpg')[m
+ [m
+         return ([m
+             <img src={imageName} />[m

@@ -4,9 +4,21 @@ import { Route, Link } from 'react-router-dom'
 
 class PhotoList extends Component {
 
+    returnPhotos() {
+        const imageName = require('../img/img_lights.jpg')
+        return ([imageName,imageName,imageName])
+    }
+
+    renderPhotos() {
+        const pics = this.returnPhotos()
+
+        return (
+            {pics.map}
+        )
+    }
+
 
     render() {
-        const imageName = require('../img/img_lights.jpg')
 
         return (
             <img src={imageName} />
