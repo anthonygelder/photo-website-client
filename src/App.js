@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
-import { Route, Link } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import Header from './Header/Header'
+import About from './About/About'
 import PhotoList from './PhotoList/PhotoList'
 import './App.css'
 
@@ -13,7 +14,8 @@ class App extends Component {
           <Route path='/' component={Header} />
         </header>
         <main className='App'>
-          <Route path='/' component={PhotoList} />
+          <Route exact path='/' component={PhotoList} />
+          <Route exact path='/about' component={About} />
         </main>
       </div>
     );

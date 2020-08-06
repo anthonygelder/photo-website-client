@@ -1,27 +1,28 @@
-import React, {Component} from 'react'
-import { Route, Link } from 'react-router-dom'
+import React, { Component } from 'react'
+// import { Route, Link } from 'react-router-dom'
 // import Photo from './Photo/Photo'
+import './PhotoList.css'
 
 class PhotoList extends Component {
 
     returnPhotos() {
         const imageName = require('../img/img_lights.jpg')
-        return ([imageName,imageName,imageName])
+        return ([<img className="slide" src={imageName} alt="logo"/>,<img className="slide" src={imageName} alt="logo"/>,<img className="slide" src={imageName} alt="logo"/>])
     }
 
     renderPhotos() {
-        const pics = this.returnPhotos()
-
-        return (
-            {pics.map}
-        )
+        // const pics = this.returnPhotos()
     }
 
 
     render() {
 
         return (
-            <img src={imageName} />
+            <section className="outer-wrapper">
+                <div className="wrapper">
+                    {this.returnPhotos()}
+                </div>
+            </section>
         );
     }
 }
