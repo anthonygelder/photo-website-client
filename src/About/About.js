@@ -5,7 +5,7 @@ class About extends Component {
   render() {
     return (
         <>
-            <img src={ require('../img/Untitled.png')} alt="logo"/>
+            <img src={ require('../img/Oscar.png')} alt="logo"/>
         </>
     )
   }
